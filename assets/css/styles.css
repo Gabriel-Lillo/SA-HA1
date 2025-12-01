@@ -1919,10 +1919,10 @@ p {
 .auth-panel {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
   background: var(--color-white);
   border-radius: var(--radius-2xl);
-  padding: var(--space-2xl);
+  padding: var(--space-md);
   box-shadow: var(--shadow-xl);
   transform: scale(0.95);
   opacity: 0;
@@ -2912,9 +2912,7 @@ p {
 
 /* ==================== FOOTER ==================== */
 .footer {
-  background: #0a0a0a;
-  
-  /* var(--color-text); */
+  background: var(--color-text);
   color: var(--color-white);
   padding: var(--space-3xl) 0 var(--space-lg);
 }

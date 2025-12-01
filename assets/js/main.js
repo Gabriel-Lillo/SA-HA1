@@ -240,7 +240,7 @@ const blogPosts = [
     id: 2,
     title: "Los Mejores Lugares para Patinar en Santiago",
     excerpt: "Una guía completa de los spots más populares y seguros para disfrutar del patinaje en la capital.",
-    image: "assets/img/placeholder.svg?height=300&width=500",
+    image: "assets/img/spotter_rogerferrero.jpg",
     content:
       "Santiago ofrece múltiples opciones para los amantes del patinaje. Aquí nuestros favoritos:\n\n**Parque Bicentenario**: Amplias ciclovías y superficies lisas perfectas para principiantes.\n\n**Parque Forestal**: Ambiente bohemio y rutas escénicas junto al río Mapocho.\n\n**Costanera Center**: Explanadas amplias ideales para practicar trucos.\n\n**Parque O'Higgins**: Circuitos largos para sesiones de fitness.\n\n**Skatepark de Providencia**: Para los más avanzados que buscan rampas y obstáculos.\n\nRecuerda siempre respetar a los peatones y usar protección.",
   },
@@ -248,7 +248,7 @@ const blogPosts = [
     id: 3,
     title: "Cómo Mantener tus Patines en Óptimas Condiciones",
     excerpt: "Guía práctica de mantenimiento para alargar la vida útil de tu equipo y mejorar tu rendimiento.",
-    image: "assets/img/placeholder.svg?height=300&width=500",
+    image: "assets/img/mantener.jpg",
     content:
       "Un buen mantenimiento puede duplicar la vida útil de tus patines. Sigue estos pasos:\n\n**Limpieza semanal**:\n- Limpia las ruedas con un paño húmedo\n- Revisa que no haya piedras o residuos\n\n**Mantenimiento mensual**:\n- Rota las ruedas para un desgaste uniforme\n- Limpia los rodamientos con solvente especial\n- Lubrica con aceite para rodamientos\n\n**Revisión trimestral**:\n- Verifica el estado de los frenos\n- Revisa tornillos y ejes\n- Inspecciona la bota por desgaste\n\n¿No tienes tiempo? ¡Trae tus patines a nuestro servicio de mantenimiento!",
   },
