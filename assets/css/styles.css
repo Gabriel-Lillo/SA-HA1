@@ -87,7 +87,9 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-  --color-text: #f1f5f9;
+  --color-text: #1e293b
+  /* #f1f5f9; */
+
   --color-text-light: #cbd5e1;
   --color-text-muted: #94a3b8;
   --color-border: #334155;
@@ -613,6 +615,27 @@ p {
   }
 }
 
+/* Hide some actions on very small screens */
+@media (max-width: 500px) {
+  .search-wrapper,
+  .theme-toggle,
+  .header__favorites {
+    display: none;
+  }
+  
+  .header__actions {
+    gap: var(--space-xs);
+  }
+  
+  .header__container {
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .logo__text {
+    font-size: var(--font-size-base);
+  }
+}
+
 .cart-count,
 .favorites-count {
   position: absolute;
@@ -702,11 +725,19 @@ p {
   display: flex;
   width: 2.5rem;
   height: 2.5rem;
+  flex-shrink: 0;
 }
 
 @media (min-width: 1024px) {
   .header__menu-toggle {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__menu-toggle {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -1929,6 +1960,53 @@ p {
   transition: all var(--transition-base);
 }
 
+.auth-panel--register {
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-lg);
+}
+
+.auth-panel--register .auth-panel__header {
+  grid-column: 1 / -1;
+}
+
+.auth-panel--register .auth-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.auth-panel--register .form-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.auth-panel--register .form-group:not(.form-row .form-group) {
+  grid-column: 1 / -1;
+}
+
+.auth-panel--register .btn--block {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .auth-panel--register {
+    max-width: 420px;
+  }
+  
+  .auth-panel--register .auth-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .auth-panel--register .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 [data-theme="dark"] .auth-panel {
   background: var(--color-bg);
 }
@@ -1987,6 +2065,23 @@ p {
   font-size: var(--font-size-sm);
 }
 
+/* Reduced spacing for register panel */
+.auth-panel--register .auth-panel__header {
+  margin-bottom: var(--space-lg);
+}
+
+.auth-panel--register .form-group {
+  margin-bottom: 0;
+}
+
+.auth-panel--register .auth-form {
+  margin-bottom: var(--space-lg);
+}
+
+.auth-panel--register .auth-panel__footer {
+  padding-top: var(--space-md);
+}
+
 .auth-form {
   margin-bottom: var(--space-xl);
 }
@@ -2001,6 +2096,7 @@ p {
   font-size: var(--font-size-sm);
   margin-bottom: var(--space-md);
 }
+
 
 /* Cart Panel */
 .cart-panel {
@@ -3120,6 +3216,7 @@ p {
 @media (max-width: 480px) {
   :root {
     --container-padding: var(--space-md);
+    --header-height: 4.5rem;
   }
 
   .hero {
@@ -3176,6 +3273,12 @@ p {
     display: block;
   }
 
+  .hero {
+    min-height: calc(100vh - var(--header-height));
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+  
   @media (min-width: 1024px) {
     .toolbar__filters-toggle {
       display: none;
