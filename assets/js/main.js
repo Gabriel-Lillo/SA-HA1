@@ -393,6 +393,7 @@ function initNavigation() {
   // Cart button
   document.getElementById("cart-btn").addEventListener("click", () => {
     openOverlay("cart-overlay")
+    switchCartTab("cart")
   })
 
   // Favorites button

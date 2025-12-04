@@ -21,6 +21,7 @@
   --color-border: #e2e8f0;
   --color-bg: #f8fafc;
   --color-bg-alt: #f1f5f9;
+  --color-bg-footer: #0F172A;
 
   /* Feedback Colors */
   --color-success: #128f8b;
@@ -87,15 +88,15 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-  --color-text: #1e293b
+  --color-text: #f1f5f9;
   /* #f1f5f9; */
-
+  --color-bg-footer: #0F172A;
   --color-text-light: #cbd5e1;
   --color-text-muted: #94a3b8;
   --color-border: #334155;
-  --color-bg: #0f172a;
+  --color-bg: #0F172A;
   --color-bg-alt: #1e293b;
-  --color-white: #1e293b;
+  --color-white: #ffffff;
   --color-accent: #1e293b;
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
   --shadow-card-hover: 0 8px 30px rgba(18, 143, 139, 0.25);
@@ -400,7 +401,7 @@ p {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 1rem;
   font-size: var(--font-size-base);
-  color: var(--color-text);
+  color: var(#000000);
   background: var(--color-white)
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
     no-repeat right 0.75rem center;
@@ -840,6 +841,7 @@ p {
 
 .section--home {
   padding-top: 4rem;
+  padding-inline: 0; 
 }
 
 .section--about,
@@ -859,22 +861,47 @@ p {
 /* ==================== HERO ==================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  /* si quieres que el hero considere la altura del header, usa calc(...) */
+  min-height: 100vh; /* o: calc(100vh - var(--header-height)) si tienes la variable */
   display: flex;
-  align-items: center;
-  padding: var(--space-3xl) var(--container-padding);
+  align-items: center;     /* centra verticalmente el .hero__inner */
+  justify-content: center; /* centra horizontalmente el .hero__inner */
   overflow: hidden;
 }
 
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--container-padding);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--space-3xl);
+}
+
+/* Fondo y burbujas */
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-white) 50%, var(--color-secondary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent) 0%,
+    var(--color-white) 50%,
+    var(--color-secondary-light) 100%
+  );
   z-index: -1;
 }
 
 [data-theme="dark"] .hero__bg {
-  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 50%, rgba(18, 143, 139, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg) 0%,
+    var(--color-bg-alt) 50%,
+    rgba(18, 143, 139, 0.1) 100%
+  );
 }
 
 .hero__bubble {
@@ -923,8 +950,8 @@ p {
   }
 }
 
+/* Contenido */
 .hero__content {
-  flex: 1;
   max-width: 600px;
   z-index: 1;
 }
@@ -949,18 +976,13 @@ p {
   gap: var(--space-md);
 }
 
+/* Imagen */
 .hero__image {
-  flex: 1;
   max-width: 600px;
   display: none;
 }
 
 @media (min-width: 1024px) {
-  .hero {
-    max-width: var(--container-max);
-    margin: 0 auto;
-  }
-
   .hero__image {
     display: block;
   }
@@ -971,6 +993,22 @@ p {
   }
 }
 
+/* Responsive tablet/móvil */
+@media (max-width: 960px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--space-2xl);
+  }
+
+  .hero__content {
+    max-width: none;
+  }
+
+  .hero__image {
+    display: block;
+    max-width: 100%;
+  }
+}
 /* ==================== FEATURED / CAROUSEL ==================== */
 .featured {
   padding: var(--space-3xl) 0;
@@ -1061,7 +1099,7 @@ p {
 .product-card {
   flex: 0 0 calc(100% - var(--space-lg));
   max-width: calc(100% - var(--space-lg));
-  background: var(--color-white);
+  background: var(#000000);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -3008,7 +3046,7 @@ p {
 
 /* ==================== FOOTER ==================== */
 .footer {
-  background: var(--color-text);
+  background: var(--color-bg-footer);
   color: var(--color-white);
   padding: var(--space-3xl) 0 var(--space-lg);
 }
