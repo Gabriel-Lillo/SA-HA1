@@ -1822,3 +1822,80 @@ window.processPaymentSimulated = processPaymentSimulated
 window.finishCheckout = finishCheckout
 window.changePage = changePage
 window.clearFilters = clearFilters
+
+/* ==================== CONTACT SECTION ==================== */
+function handleContactForm(e) {
+  e.preventDefault()
+
+  const name = document.getElementById("contact-name").value.trim()
+  const email = document.getElementById("contact-email").value.trim()
+  const reason = document.getElementById("contact-reason").value
+  const message = document.getElementById("contact-message").value.trim()
+  const privacy = document.getElementById("contact-privacy").checked
+
+  // Clear errors
+  document.getElementById("contact-name-error").textContent = ""
+  document.getElementById("contact-email-error").textContent = ""
+  document.getElementById("contact-reason-error").textContent = ""
+  document.getElementById("contact-message-error").textContent = ""
+  document.getElementById("contact-privacy-error").textContent = ""
+
+  // Remove error classes
+  document.getElementById("contact-name").classList.remove("error")
+  document.getElementById("contact-email").classList.remove("error")
+  document.getElementById("contact-reason").classList.remove("error")
+  document.getElementById("contact-message").classList.remove("error")
+
+  // Validate
+  let isValid = true
+
+  if (!name) {
+    document.getElementById("contact-name-error").textContent = "El nombre es requerido"
+    document.getElementById("contact-name").classList.add("error")
+    isValid = false
+  }
+
+  if (!email) {
+    document.getElementById("contact-email-error").textContent = "El correo es requerido"
+    document.getElementById("contact-email").classList.add("error")
+    isValid = false
+  } else if (!isValidEmail(email)) {
+    document.getElementById("contact-email-error").textContent = "Ingresa un correo válido"
+    document.getElementById("contact-email").classList.add("error")
+    isValid = false
+  }
+
+  if (!reason) {
+    document.getElementById("contact-reason-error").textContent = "Selecciona un motivo de contacto"
+    document.getElementById("contact-reason").classList.add("error")
+    isValid = false
+  }
+
+  if (!message) {
+    document.getElementById("contact-message-error").textContent = "El mensaje es requerido"
+    document.getElementById("contact-message").classList.add("error")
+    isValid = false
+  } else if (message.length < 20) {
+    document.getElementById("contact-message-error").textContent = "El mensaje debe tener al menos 20 caracteres"
+    document.getElementById("contact-message").classList.add("error")
+    isValid = false
+  }
+
+  if (!privacy) {
+    document.getElementById("contact-privacy-error").textContent = "Debes aceptar la política de privacidad"
+    isValid = false
+  }
+
+  if (!isValid) return
+
+  showToast("Mensaje enviado correctamente (simulado). Te contactaremos pronto.", "success")
+  e.target.reset()
+}
+
+function showFormError(inputId, message) {
+  const input = document.getElementById(inputId)
+  const error = document.getElementById(`${inputId}-error`)
+
+  if (input) input.classList.add("error")
+  if (error) error.textContent = message
+}

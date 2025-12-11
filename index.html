@@ -40,6 +40,9 @@
           <li class="nav__item">
             <a href="#community" class="nav__link" data-section="community">Comunidad</a>
           </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link" data-section="contact">Contactanos</a>
+          </li>
         </ul>
       </nav>
 
@@ -562,6 +565,148 @@
         </div>
       </div>
     </section>
+
+
+    <!-- ==================== CONTACT US SECTION ==================== -->
+    <section class="section section--contact" id="contact" aria-label="Contacto">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__info animate-on-scroll">
+            <h1 class="page-title">Contáctanos</h1>
+            <p class="page-subtitle">¿Tienes dudas, sugerencias o simplemente quieres saludar? Estamos aquí para ayudarte.</p>
+            
+            <div class="contact__details">
+              <div class="contact__item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <div>
+                  <strong>Email</strong>
+                  <p>contactme@powerrocket.cl</p>
+                </div>
+              </div>
+              
+              <div class="contact__item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div>
+                  <strong>Horario de atención</strong>
+                  <p>Lunes a Viernes: 9:00 - 18:00</p>
+                  <p>Sábados: 10:00 - 14:00</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact__social">
+              <p>Síguenos en redes</p>
+              <div class="contact__social-links">
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="YouTube">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact__form-wrapper animate-on-scroll">
+            <h2>Envíanos un mensaje</h2>
+            <form class="contact__form" id="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nombre</label>
+                <input type="text" class="form-input" id="contact-name" placeholder="Tu nombre completo">
+                <span class="form-error" id="contact-name-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-input" id="contact-email" placeholder="tu@correo.com">
+                <span class="form-error" id="contact-email-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-reason" class="form-label">Motivo de contacto</label>
+                <select class="form-select" id="contact-reason">
+                  <option value="">Selecciona una opción</option>
+                  <option value="consulta">Consulta general</option>
+                  <option value="productos">Información de productos</option>
+                  <option value="servicios">Servicios y mantenimiento</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <span class="form-error" id="contact-reason-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Mensaje</label>
+                <textarea class="form-textarea" id="contact-message" rows="5" placeholder="Escribe tu mensaje aquí (mínimo 20 caracteres)"></textarea>
+                <span class="form-error" id="contact-message-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label class="contact__checkbox">
+                  <input type="checkbox" id="contact-privacy">
+                  <span class="checkmark"></span>
+                  <span class="checkbox-label">Acepto la política de privacidad y el tratamiento de mis datos</span>
+                </label>
+                <span class="form-error" id="contact-privacy-error"></span>
+              </div>
+              
+              <button type="submit" class="btn btn--primary btn--block">
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <!-- <section class="section section--contact" id="contactUs" aria-label="Nuestra Comunidad">
+      <div class="container">
+        <div class="contact-page">
+          <div class="contact-page__header animate-on-scroll">
+            <h1 class="page-title">Contactanos</h1>
+            <p class="page-subtitle">Historias, tips y la voz de quienes mueven el mundo</p>
+          </div> -->
+
+          <!-- Blog Section -->
+          <!-- <div class="blog-section">
+            <h2 class="section-title animate-on-scroll">Blog</h2>
+            <div class="blog-grid" id="blog-grid"> -->
+              <!-- Blog posts injected by JS -->
+            <!-- </div>
+          </div> -->
+
+          <!-- Testimonials Section -->
+          <!-- <div class="testimonials-section">
+            <h2 class="section-title animate-on-scroll">Lo que dicen de nosotros</h2>
+            <div class="testimonials-grid" id="testimonials-grid"> -->
+              <!-- Testimonials injected by JS -->
+            <!-- </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+
+    
   </main>
 
   <!-- ==================== LOGIN OVERLAY ==================== -->
