@@ -1969,10 +1969,9 @@ p {
   margin-bottom: var(--space-3xl);
 }
 .section--contact {
-  padding: var(--space-3xl) 0;
+  padding: 10rem 0 4rem;
+  /* padding: var(--space-3xl) 0; */
   min-height: 100vh;
-  display: flex;
-  align-items: center;
 }
 
 .contact {
