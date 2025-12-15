@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rocket Power - E-commerce de patines y equipamiento recreativo. Comunidad y blog orientados a promover la actividad física lúdica.">
+  <meta name="description"
+    content="Rocket Power - E-commerce de patines y equipamiento recreativo. Comunidad y blog orientados a promover la actividad física lúdica.">
   <meta name="theme-color" content="#128f8b">
-  <title>Power Rocket  | Mueve tu mundo</title>
+  <title>Power Rocket | Mueve tu mundo</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
   <!-- Skip to content (Accessibility) -->
   <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -17,7 +20,7 @@
   <!-- Header with Glassmorphism -->
   <header class="header" id="header">
     <div class="header__container">
-      <a href="#" class="header__logo" onclick="showSection('home'); return false;">
+      <a href="index.html" class="header__logo">
         <span class="logo__icon">🚀</span>
         <span class="logo__text">Power<span class="logo__accent">Rocket</span></span>
       </a>
@@ -25,24 +28,12 @@
       <!-- Desktop Navigation -->
       <nav class="header__nav" id="nav">
         <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#home" class="nav__link active" data-section="home">Inicio</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link" data-section="about">Sobre Nosotros</a>
-          </li>
-          <li class="nav__item">
-            <a href="#products" class="nav__link" data-section="products">Productos</a>
-          </li>
-          <li class="nav__item">
-            <a href="#services" class="nav__link" data-section="services">Servicios</a>
-          </li>
-          <li class="nav__item">
-            <a href="#community" class="nav__link" data-section="community">Comunidad</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link" data-section="contact">Contactanos</a>
-          </li>
+          <li class="nav__item"><a href="index.html" class="nav__link active">Inicio</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">Sobre Nosotros</a></li>
+          <li class="nav__item"><a href="products.html" class="nav__link">Productos</a></li>
+          <li class="nav__item"><a href="services.html" class="nav__link">Servicios</a></li>
+          <li class="nav__item"><a href="community.html" class="nav__link">Comunidad</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contactanos</a></li>
         </ul>
       </nav>
 
@@ -71,7 +62,9 @@
         <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
           <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+            </path>
           </svg>
           <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -90,7 +83,9 @@
         <!-- Favorites -->
         <button class="header__favorites" id="favorites-btn" aria-label="Mis favoritos">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
           </svg>
           <span class="favorites-count" id="favorites-count">0</span>
         </button>
@@ -131,27 +126,25 @@
               Mueve tu mundo con <span class="text-gradient">Power Rocket</span>
             </h1>
             <p class="hero__subtitle animate-on-scroll">
-              La diversión como motor de la actividad física. Combate el sedentarismo con patines, comunidad y la mejor actitud.
+              La diversión como motor de la actividad física. Combate el sedentarismo con patines, comunidad y la mejor
+              actitud.
             </p>
             <div class="hero__cta animate-on-scroll">
-              <button class="btn btn--primary btn--lg" onclick="showSection('products')">
+              <button class="btn btn--primary btn--lg" onclick="location.href='products.html'">
                 Empieza a rodar
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </button>
-              <button class="btn btn--secondary btn--lg" onclick="showSection('community')">
+              <button class="btn btn--secondary btn--lg" onclick="location.href='community.html'">
                 Únete a la comunidad
               </button>
             </div>
           </div>
 
           <div class="hero__image animate-on-scroll">
-            <img
-              src="assets/img/video_preview_0000.png?height=500&width=600"
-              alt="Patinador disfrutando con Rocket Power"
-              loading="eager"
-            />
+            <img src="assets/img/video_preview_0000.png?height=500&width=600"
+              alt="Patinador disfrutando con Rocket Power" loading="eager" />
           </div>
         </div>
       </div>
@@ -181,7 +174,7 @@
           </div>
           <div class="carousel__dots" id="carousel-dots"></div>
           <div class="featured__cta">
-            <button class="btn btn--outline" onclick="showSection('products')">
+            <button class="btn btn--outline" onclick="location.href='products.html'">
               Ver todos los productos
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -214,12 +207,13 @@
               <p class="giftcard__text">
                 Las Giftcards de Rocket Power son el regalo perfecto para quienes aman la libertad sobre ruedas.
               </p>
-              <button class="btn btn--primary" onclick="filterByCategory('Giftcards'); showSection('products');">
+              <button class="btn btn--primary" onclick="location.href='products.html?category=Giftcards'">
                 Comprar Giftcard
               </button>
             </div>
             <div class="giftcard__image">
-              <img src="assets/img/gift-card-modern-design-teal-gradient-skating-them.jpg?height=300&width=400" alt="Giftcard Rocket Power" loading="lazy">
+              <img src="assets/img/gift-card-modern-design-teal-gradient-skating-them.jpg?height=300&width=400"
+                alt="Giftcard Rocket Power" loading="lazy">
             </div>
           </div>
         </div>
@@ -233,7 +227,7 @@
             <p class="services-cta__text">
               Conoce nuestros servicios de mantenimiento, personalización y clases para todos los niveles.
             </p>
-            <button class="btn btn--secondary btn--lg" onclick="showSection('services')">
+            <button class="btn btn--secondary btn--lg" onclick="location.href='services.html'">
               Explorar servicios
             </button>
           </div>
@@ -254,7 +248,8 @@
                 <span class="form-error" id="newsletter-name-error"></span>
               </div>
               <div class="form-group">
-                <input type="email" class="form-input" id="newsletter-email" placeholder="Tu correo electrónico" required>
+                <input type="email" class="form-input" id="newsletter-email" placeholder="Tu correo electrónico"
+                  required>
                 <span class="form-error" id="newsletter-email-error"></span>
               </div>
               <button type="submit" class="btn btn--primary">
@@ -265,451 +260,15 @@
         </div>
       </div>
 
-      
+
 
     </section>
 
-    <!-- ==================== ABOUT SECTION ==================== -->
-    <section class="section section--about" id="about" aria-label="Sobre Nosotros">
-      <div class="container">
-        <div class="about">
-          <div class="about__header animate-on-scroll">
-            <h1 class="page-title">Sobre Power Rocket</h1>
-            <p class="page-subtitle">Transformando el sedentarismo en diversión sobre ruedas</p>
-          </div>
-
-          <div class="about__content">
-            <div class="about__text animate-on-scroll">
-              <h2>La problemática</h2>
-              <p>
-                Vivimos en una era donde el sedentarismo se ha convertido en una epidemia silenciosa. 
-                Las largas horas frente a pantallas, el trabajo de escritorio y la falta de motivación 
-                han alejado a muchas personas de la actividad física. El resultado: problemas de salud, 
-                estrés y una desconexión con nuestro propio cuerpo.
-              </p>
-            </div>
-
-            <div class="about__text animate-on-scroll">
-              <h2>Nuestra solución</h2>
-              <p>
-                En Power Rocket creemos que la clave no está en obligarte a hacer ejercicio, 
-                sino en redescubrir la alegría del movimiento. Por eso combinamos un e-commerce 
-                de patines y equipamiento recreativo con una comunidad activa y un blog lleno 
-                de inspiración. No vendemos solo productos, vendemos experiencias.
-              </p>
-            </div>
-
-            <div class="about__text animate-on-scroll">
-              <h2>Enfoque lúdico y comunitario</h2>
-              <p>
-                Nuestro enfoque es simple: si algo es divertido, lo repetirás. El patinaje 
-                no es solo un deporte, es una forma de expresión, de libertad, de conexión 
-                con otros que comparten la misma pasión. Por eso organizamos eventos, 
-                compartimos historias y creamos un espacio donde todos son bienvenidos, 
-                sin importar su nivel.
-              </p>
-            </div>
-          </div>
-
-          <div class="about__image animate-on-scroll">
-            <img src="assets/img/GrupoCompile5.png?height=500&width=900" alt="Comunidad Power Rocket patinando juntos" loading="lazy">
-          </div>
-
-          <div class="about__values animate-on-scroll">
-            <div class="value-card">
-              <div class="value-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </div>
-              <h3>Pasión</h3>
-              <p>Amamos lo que hacemos y se nota en cada producto que ofrecemos.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3>Comunidad</h3>
-              <p>Somos más fuertes juntos. Cada patinador es parte de la familia.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </div>
-              <h3>Calidad</h3>
-              <p>Solo ofrecemos productos que usaríamos nosotros mismos.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                </svg>
-              </div>
-              <h3>Diversión</h3>
-              <p>El ejercicio debe ser un placer, no una obligación.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== PRODUCTS SECTION ==================== -->
-    <section class="section section--products" id="products" aria-label="Productos">
-      <div class="container">
-        <div class="products-page">
-          <div class="products-page__header animate-on-scroll">
-            <h1 class="page-title">Nuestros Productos</h1>
-            <p class="page-subtitle">Equipamiento de calidad para todos los niveles</p>
-          </div>
-
-          <div class="products-page__toolbar animate-on-scroll">
-            <div class="toolbar__filters-toggle">
-              <button class="btn btn--outline btn--sm" id="filters-toggle-mobile">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                </svg>
-                Filtros
-              </button>
-            </div>
-            <div class="toolbar__sort">
-              <label for="sort-select" class="sr-only">Ordenar por</label>
-              <select class="form-select" id="sort-select">
-                <option value="default">Ordenar por</option>
-                <option value="price-asc">Precio: menor a mayor</option>
-                <option value="price-desc">Precio: mayor a menor</option>
-                <option value="name-asc">Nombre: A-Z</option>
-                <option value="name-desc">Nombre: Z-A</option>
-              </select>
-            </div>
-            <div class="toolbar__results">
-              <span id="results-count">0 productos</span>
-            </div>
-          </div>
-
-          <div class="products-page__content">
-            <!-- Sidebar Filters -->
-            <aside class="products-sidebar" id="products-sidebar">
-              <div class="sidebar__header">
-                <h3>Filtros</h3>
-                <button class="sidebar__close" id="sidebar-close" aria-label="Cerrar filtros">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </button>
-              </div>
-              <div class="sidebar__content">
-                <div class="filter-group">
-                  <h4 class="filter-group__title">Categorías</h4>
-                  <div class="filter-group__options" id="category-filters">
-                    <!-- Categories injected by JS -->
-                  </div>
-                </div>
-                <div class="filter-group">
-                  <h4 class="filter-group__title">Precio</h4>
-                  <div class="filter-group__options">
-                    <label class="filter-checkbox">
-                      <input type="checkbox" name="price" value="0-50000">
-                      <span class="checkmark"></span>
-                      Hasta $50.000
-                    </label>
-                    <label class="filter-checkbox">
-                      <input type="checkbox" name="price" value="50000-100000">
-                      <span class="checkmark"></span>
-                      $50.000 - $100.000
-                    </label>
-                    <label class="filter-checkbox">
-                      <input type="checkbox" name="price" value="100000-200000">
-                      <span class="checkmark"></span>
-                      $100.000 - $200.000
-                    </label>
-                    <label class="filter-checkbox">
-                      <input type="checkbox" name="price" value="200000-999999">
-                      <span class="checkmark"></span>
-                      Más de $200.000
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn--outline btn--block" id="clear-filters">
-                  Limpiar filtros
-                </button>
-              </div>
-            </aside>
-
-            <!-- Products Grid -->
-            <div class="products-grid-container">
-              <div class="products-grid" id="products-grid">
-                <!-- Products injected by JS -->
-              </div>
-              <div class="products-pagination" id="products-pagination">
-                <!-- Pagination injected by JS -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SERVICES SECTION ==================== -->
-    <section class="section section--services" id="services" aria-label="Servicios">
-      <div class="container">
-        <div class="services-page">
-          <div class="services-page__header animate-on-scroll">
-            <h1 class="page-title">Nuestros Servicios</h1>
-            <p class="page-subtitle">Más que productos, experiencias completas</p>
-          </div>
-
-          <div class="services-grid" id="services-grid">
-            <!-- Service: Mantenimiento -->
-            <div class="service-card animate-on-scroll" data-service="maintenance">
-              <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                </svg>
-              </div>
-              <h3 class="service-card__title">Mantenimiento</h3>
-              <p class="service-card__desc">
-                Mantén tus patines en perfectas condiciones con nuestro servicio profesional de mantenimiento y reparación.
-              </p>
-              <ul class="service-card__features">
-                <li>Cambio de ruedas y rodamientos</li>
-                <li>Ajuste de frenos</li>
-                <li>Limpieza profunda</li>
-              </ul>
-              <button class="btn btn--primary" onclick="openServiceModal('maintenance')">
-                Ver más
-              </button>
-            </div>
-
-            <!-- Service: Custom -->
-            <div class="service-card animate-on-scroll" data-service="custom">
-              <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 20h9"></path>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                </svg>
-              </div>
-              <h3 class="service-card__title">Personalización</h3>
-              <p class="service-card__desc">
-                Haz tus patines únicos con nuestro servicio de customización. Tu estilo, tu identidad.
-              </p>
-              <ul class="service-card__features">
-                <li>Pintura personalizada</li>
-                <li>Grabado láser</li>
-                <li>Combinaciones exclusivas</li>
-              </ul>
-              <button class="btn btn--primary" onclick="openServiceModal('custom')">
-                Ver más
-              </button>
-            </div>
-
-            <!-- Service: Clases -->
-            <div class="service-card animate-on-scroll" data-service="classes">
-              <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3 class="service-card__title">Clases y Talleres</h3>
-              <p class="service-card__desc">
-                Aprende a patinar o mejora tus habilidades con nuestros instructores certificados.
-              </p>
-              <ul class="service-card__features">
-                <li>Clases para principiantes</li>
-                <li>Talleres de trucos</li>
-                <li>Sesiones grupales</li>
-              </ul>
-              <button class="btn btn--primary" onclick="openServiceModal('classes')">
-                Ver más
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== COMMUNITY SECTION ==================== -->
-    <section class="section section--community" id="community" aria-label="Nuestra Comunidad">
-      <div class="container">
-        <div class="community-page">
-          <div class="community-page__header animate-on-scroll">
-            <h1 class="page-title">Nuestra Comunidad</h1>
-            <p class="page-subtitle">Historias, tips y la voz de quienes mueven el mundo</p>
-          </div>
-
-          <!-- Blog Section -->
-          <div class="blog-section">
-            <h2 class="section-title animate-on-scroll">Blog</h2>
-            <div class="blog-grid" id="blog-grid">
-              <!-- Blog posts injected by JS -->
-            </div>
-          </div>
-
-          <!-- Testimonials Section -->
-          <div class="testimonials-section">
-            <h2 class="section-title animate-on-scroll">Lo que dicen de nosotros</h2>
-            <div class="testimonials-grid" id="testimonials-grid">
-              <!-- Testimonials injected by JS -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- ==================== CONTACT US SECTION ==================== -->
-    <section class="section section--contact" id="contact" aria-label="Contacto">
-      <div class="container">
-        <div class="contact">
-          <div class="contact__info animate-on-scroll">
-            <h1 class="page-title">Contáctanos</h1>
-            <p class="page-subtitle">¿Tienes dudas, sugerencias o simplemente quieres saludar? Estamos aquí para ayudarte.</p>
-            
-            <div class="contact__details">
-              <div class="contact__item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <div>
-                  <strong>Email</strong>
-                  <p>contactme@powerrocket.cl</p>
-                </div>
-              </div>
-              
-              <div class="contact__item">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                <div>
-                  <strong>Horario de atención</strong>
-                  <p>Lunes a Viernes: 9:00 - 18:00</p>
-                  <p>Sábados: 10:00 - 14:00</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="contact__social">
-              <p>Síguenos en redes</p>
-              <div class="contact__social-links">
-                <a href="#" class="social-link" aria-label="Instagram">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="Facebook">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                  </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="YouTube">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="contact__form-wrapper animate-on-scroll">
-            <h2>Envíanos un mensaje</h2>
-            <form class="contact__form" id="contact-form">
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Nombre</label>
-                <input type="text" class="form-input" id="contact-name" placeholder="Tu nombre completo">
-                <span class="form-error" id="contact-name-error"></span>
-              </div>
-              
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-input" id="contact-email" placeholder="tu@correo.com">
-                <span class="form-error" id="contact-email-error"></span>
-              </div>
-              
-              <div class="form-group">
-                <label for="contact-reason" class="form-label">Motivo de contacto</label>
-                <select class="form-select" id="contact-reason">
-                  <option value="">Selecciona una opción</option>
-                  <option value="consulta">Consulta general</option>
-                  <option value="productos">Información de productos</option>
-                  <option value="servicios">Servicios y mantenimiento</option>
-                  <option value="sugerencia">Sugerencia</option>
-                  <option value="otro">Otro</option>
-                </select>
-                <span class="form-error" id="contact-reason-error"></span>
-              </div>
-              
-              <div class="form-group">
-                <label for="contact-message" class="form-label">Mensaje</label>
-                <textarea class="form-textarea" id="contact-message" rows="5" placeholder="Escribe tu mensaje aquí (mínimo 20 caracteres)"></textarea>
-                <span class="form-error" id="contact-message-error"></span>
-              </div>
-              
-              <div class="form-group">
-                <label class="contact__checkbox">
-                  <input type="checkbox" id="contact-privacy">
-                  <span class="checkmark"></span>
-                  <span class="checkbox-label">Acepto la política de privacidad y el tratamiento de mis datos</span>
-                </label>
-                <span class="form-error" id="contact-privacy-error"></span>
-              </div>
-              
-              <button type="submit" class="btn btn--primary btn--block">
-                Enviar mensaje
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-     
-    <!-- <section class="section section--contact" id="contactUs" aria-label="Nuestra Comunidad">
-      <div class="container">
-        <div class="contact-page">
-          <div class="contact-page__header animate-on-scroll">
-            <h1 class="page-title">Contactanos</h1>
-            <p class="page-subtitle">Historias, tips y la voz de quienes mueven el mundo</p>
-          </div> -->
-
-          <!-- Blog Section -->
-          <!-- <div class="blog-section">
-            <h2 class="section-title animate-on-scroll">Blog</h2>
-            <div class="blog-grid" id="blog-grid"> -->
-              <!-- Blog posts injected by JS -->
-            <!-- </div>
-          </div> -->
-
-          <!-- Testimonials Section -->
-          <!-- <div class="testimonials-section">
-            <h2 class="section-title animate-on-scroll">Lo que dicen de nosotros</h2>
-            <div class="testimonials-grid" id="testimonials-grid"> -->
-              <!-- Testimonials injected by JS -->
-            <!-- </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
 
 
-    
+
+
   </main>
 
   <!-- ==================== LOGIN OVERLAY ==================== -->
@@ -843,7 +402,9 @@
         </button>
         <button class="cart-tab" data-tab="favorites">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
           </svg>
           Favoritos
         </button>
@@ -874,7 +435,9 @@
         </div>
         <div class="favorites-empty" id="favorites-empty">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
           </svg>
           <p>No tienes favoritos aún</p>
           <button class="btn btn--primary" onclick="closeOverlay('cart-overlay'); showSection('products');">
@@ -1123,12 +686,13 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="#" class="footer__logo" onclick="showSection('home'); return false;">
+          <a href="index.html" class="footer__logo">
             <span class="logo__icon">🚀</span>
             <span class="logo__text">Power<span class="logo__accent">Rocket</span></span>
           </a>
           <p class="footer__desc">
-            Transformando el sedentarismo en diversión sobre ruedas. E-commerce, comunidad y blog para amantes del patinaje.
+            Transformando el sedentarismo en diversión sobre ruedas. E-commerce, comunidad y blog para amantes del
+            patinaje.
           </p>
           <div class="footer__social">
             <a href="#" class="social-link" aria-label="Instagram">
@@ -1145,7 +709,9 @@
             </a>
             <a href="#" class="social-link" aria-label="YouTube">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
                 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
               </svg>
             </a>
@@ -1155,22 +721,22 @@
         <div class="footer__links">
           <h4>Navegación</h4>
           <ul>
-            <li><a href="#" onclick="showSection('home'); return false;">Inicio</a></li>
-            <li><a href="#" onclick="showSection('about'); return false;">Sobre Nosotros</a></li>
-            <li><a href="#" onclick="showSection('products'); return false;">Productos</a></li>
-            <li><a href="#" onclick="showSection('services'); return false;">Servicios</a></li>
-            <li><a href="#" onclick="showSection('community'); return false;">Comunidad</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre Nosotros</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="community.html">Comunidad</a></li>
           </ul>
         </div>
 
         <div class="footer__links">
           <h4>Categorías</h4>
           <ul>
-            <li><a href="#" onclick="filterByCategory('Patines'); showSection('products'); return false;">Patines</a></li>
-            <li><a href="#" onclick="filterByCategory('Ruedas'); showSection('products'); return false;">Ruedas</a></li>
-            <li><a href="#" onclick="filterByCategory('Protecciones'); showSection('products'); return false;">Protecciones</a></li>
-            <li><a href="#" onclick="filterByCategory('Mochilas'); showSection('products'); return false;">Mochilas</a></li>
-            <li><a href="#" onclick="filterByCategory('Ropa'); showSection('products'); return false;">Ropa</a></li>
+            <li><a href="products.html?category=Patines">Patines</a></li>
+            <li><a href="products.html?category=Ruedas">Ruedas</a></li>
+            <li><a href="products.html?category=Protecciones">Protecciones</a></li>
+            <li><a href="products.html?category=Mochilas">Mochilas</a></li>
+            <li><a href="products.html?category=Ropa">Ropa</a></li>
           </ul>
         </div>
 
@@ -1186,7 +752,9 @@
             </li>
             <li>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
               </svg>
               +56 9 1234 5678
             </li>
@@ -1210,4 +778,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -368,13 +368,13 @@ function saveStateToStorage() {
 
 function initNavigation() {
   // Nav links
+  // Nav links
+  // Modified for multi-page: Removed SPA navigation logic
   document.querySelectorAll(".nav__link").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault()
-      const section = link.dataset.section
-      showSection(section)
-      closeMobileMenu()
-    })
+    // Only intercept if it's a hash link on the same page (optional, but standard nav links will be actual pages now)
+    if (link.getAttribute("href").startsWith("#") && !link.getAttribute("href").startsWith("#!")) {
+      // link.addEventListener("click", ...) - Removed to allow default navigation
+    }
   })
 
   // Mobile menu toggle
@@ -457,6 +457,9 @@ function initSearch() {
   const searchInput = document.getElementById("search-input")
   const searchBtn = document.getElementById("search-btn")
 
+  if (!searchToggle || !searchBox || !searchInput || !searchBtn) return
+
+
   let debounceTimer
 
   searchToggle.addEventListener("click", () => {
@@ -515,6 +518,8 @@ function initThemeToggle() {
 
 function initCarousel() {
   const track = document.getElementById("carousel-track")
+  if (!track) return
+
   const dotsContainer = document.getElementById("carousel-dots")
   const prevBtn = document.getElementById("carousel-prev")
   const nextBtn = document.getElementById("carousel-next")
@@ -623,6 +628,8 @@ function stopAutoPlay() {
 
 function initCategories() {
   const grid = document.getElementById("categories-grid")
+  if (!grid) return
+
 
   grid.innerHTML = categories
     .map(
@@ -641,9 +648,19 @@ function initCategories() {
 // ==================== PRODUCTS ====================
 
 function initProducts() {
+  if (!document.getElementById("products-grid")) return
   renderCategoryFilters()
-  renderProducts()
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryParam = urlParams.get('category');
+
+  if (categoryParam) {
+    filterByCategory(categoryParam);
+  } else {
+    renderProducts()
+  }
 }
+
 
 function renderCategoryFilters() {
   const container = document.getElementById("category-filters")
@@ -681,22 +698,34 @@ function initFilters() {
   })
 
   // Sort
-  document.getElementById("sort-select").addEventListener("change", (e) => {
-    state.sort = e.target.value
-    renderProducts()
-  })
+  const sortSelect = document.getElementById("sort-select")
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      state.sort = e.target.value
+      renderProducts()
+    })
+  }
 
   // Clear filters
-  document.getElementById("clear-filters").addEventListener("click", clearFilters)
+  const clearBtn = document.getElementById("clear-filters")
+  if (clearBtn) {
+    clearBtn.addEventListener("click", clearFilters)
+  }
 
   // Mobile filters toggle
-  document.getElementById("filters-toggle-mobile").addEventListener("click", () => {
-    document.getElementById("products-sidebar").classList.add("mobile-active")
-  })
+  const filterToggle = document.getElementById("filters-toggle-mobile")
+  if (filterToggle) {
+    filterToggle.addEventListener("click", () => {
+      document.getElementById("products-sidebar").classList.add("mobile-active")
+    })
+  }
 
-  document.getElementById("sidebar-close").addEventListener("click", () => {
-    document.getElementById("products-sidebar").classList.remove("mobile-active")
-  })
+  const sidebarClose = document.getElementById("sidebar-close")
+  if (sidebarClose) {
+    sidebarClose.addEventListener("click", () => {
+      document.getElementById("products-sidebar").classList.remove("mobile-active")
+    })
+  }
 }
 
 function handlePriceFilter() {
@@ -1335,13 +1364,13 @@ function openServiceModal(serviceKey) {
     <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Incluye:</h4>
     <ul style="margin-bottom: 1.5rem;">
       ${service.features
-        .map(
-          (f) => `<li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+      .map(
+        (f) => `<li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
         <span style="position: absolute; left: 0; color: var(--color-primary);">✓</span>
         ${f}
       </li>`,
-        )
-        .join("")}
+      )
+      .join("")}
     </ul>
     <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
       <div>
@@ -1365,6 +1394,8 @@ function openServiceModal(serviceKey) {
 
 function initBlog() {
   const grid = document.getElementById("blog-grid")
+  if (!grid) return
+
 
   grid.innerHTML = blogPosts
     .map(
@@ -1407,6 +1438,8 @@ function openBlogPost(postId) {
 
 function initTestimonials() {
   const grid = document.getElementById("testimonials-grid")
+  if (!grid) return
+
 
   grid.innerHTML = testimonials
     .map(
@@ -1430,13 +1463,16 @@ function initTestimonials() {
 
 function initForms() {
   // Login form
-  document.getElementById("login-form").addEventListener("submit", handleLogin)
+  const loginForm = document.getElementById("login-form")
+  if (loginForm) loginForm.addEventListener("submit", handleLogin)
 
   // Register form
-  document.getElementById("register-form").addEventListener("submit", handleRegister)
+  const registerForm = document.getElementById("register-form")
+  if (registerForm) registerForm.addEventListener("submit", handleRegister)
 
   // Newsletter form
-  document.getElementById("newsletter-form").addEventListener("submit", handleNewsletter)
+  const newsletterForm = document.getElementById("newsletter-form")
+  if (newsletterForm) newsletterForm.addEventListener("submit", handleNewsletter)
 }
 
 function handleLogin(e) {

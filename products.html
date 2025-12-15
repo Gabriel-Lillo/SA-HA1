@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rocket Power - Productos. Equipamiento de calidad para todos los niveles de patinaje.">
+    <meta name="theme-color" content="#128f8b">
+    <title>Productos | Power Rocket</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <span class="logo__icon">🚀</span>
+                <span class="logo__text">Power<span class="logo__accent">Rocket</span></span>
+            </a>
+
+            <nav class="header__nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Sobre Nosotros</a></li>
+                    <li class="nav__item"><a href="products.html" class="nav__link active">Productos</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="community.html" class="nav__link">Comunidad</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contactanos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-wrapper">
+                    <button class="search-toggle" id="search-toggle" aria-label="Abrir búsqueda">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="search-box" id="search-box">
+                        <input type="text" class="search-input" id="search-input" placeholder="Buscar productos...">
+                        <button class="search-btn" id="search-btn" aria-label="Buscar">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                    <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="header__user" id="user-btn" aria-label="Mi cuenta">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="user-name" id="user-name"></span>
+                </button>
+                <button class="header__favorites" id="favorites-btn" aria-label="Mis favoritos">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                    <span class="favorites-count" id="favorites-count">0</span>
+                </button>
+                <button class="header__cart" id="cart-btn" aria-label="Mi carrito">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section section--products active" id="products" aria-label="Productos">
+            <div class="container">
+                <div class="products-page">
+                    <div class="products-page__header animate-on-scroll">
+                        <h1 class="page-title">Nuestros Productos</h1>
+                        <p class="page-subtitle">Equipamiento de calidad para todos los niveles</p>
+                    </div>
+
+                    <div class="products-page__toolbar animate-on-scroll">
+                        <div class="toolbar__filters-toggle">
+                            <button class="btn btn--outline btn--sm" id="filters-toggle-mobile">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                                </svg>
+                                Filtros
+                            </button>
+                        </div>
+                        <div class="toolbar__sort">
+                            <label for="sort-select" class="sr-only">Ordenar por</label>
+                            <select class="form-select" id="sort-select">
+                                <option value="default">Ordenar por</option>
+                                <option value="price-asc">Precio: menor a mayor</option>
+                                <option value="price-desc">Precio: mayor a menor</option>
+                                <option value="name-asc">Nombre: A-Z</option>
+                                <option value="name-desc">Nombre: Z-A</option>
+                            </select>
+                        </div>
+                        <div class="toolbar__results">
+                            <span id="results-count">0 productos</span>
+                        </div>
+                    </div>
+
+                    <div class="products-page__content">
+                        <!-- Sidebar Filters -->
+                        <aside class="products-sidebar" id="products-sidebar">
+                            <div class="sidebar__header">
+                                <h3>Filtros</h3>
+                                <button class="sidebar__close" id="sidebar-close" aria-label="Cerrar filtros">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="sidebar__content">
+                                <div class="filter-group">
+                                    <h4 class="filter-group__title">Categorías</h4>
+                                    <div class="filter-group__options" id="category-filters">
+                                        <!-- Categories injected by JS -->
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <h4 class="filter-group__title">Precio</h4>
+                                    <div class="filter-group__options">
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" name="price" value="0-50000">
+                                            <span class="checkmark"></span>
+                                            Hasta $50.000
+                                        </label>
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" name="price" value="50000-100000">
+                                            <span class="checkmark"></span>
+                                            $50.000 - $100.000
+                                        </label>
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" name="price" value="100000-200000">
+                                            <span class="checkmark"></span>
+                                            $100.000 - $200.000
+                                        </label>
+                                        <label class="filter-checkbox">
+                                            <input type="checkbox" name="price" value="200000-999999">
+                                            <span class="checkmark"></span>
+                                            Más de $200.000
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn--outline btn--block" id="clear-filters">
+                                    Limpiar filtros
+                                </button>
+                            </div>
+                        </aside>
+
+                        <!-- Products Grid -->
+                        <div class="products-grid-container">
+                            <div class="products-grid" id="products-grid">
+                                <!-- Products injected by JS -->
+                            </div>
+                            <div class="products-pagination" id="products-pagination">
+                                <!-- Pagination injected by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlays (Login, Register, Cart, etc. same as other pages) -->
+    <div class="overlay" id="login-overlay" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <div class="auth-panel">
+            <button class="auth-panel__close" onclick="closeOverlay('login-overlay')" aria-label="Cerrar">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="auth-panel__header">
+                <div class="auth-panel__avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2 id="login-title">Iniciar Sesión</h2>
+                <p>Bienvenido de vuelta a Power Rocket</p>
+            </div>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-input" id="login-email" placeholder="tu@correo.com" required>
+                    <span class="form-error" id="login-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="login-password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-input" id="login-password" placeholder="••••••••" required>
+                    <span class="form-error" id="login-password-error"></span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">
+                    LOGIN
+                </button>
+            </form>
+            <div class="auth-panel__footer">
+                <p>¿No tienes cuenta?</p>
+                <button class="btn btn--outline btn--block" onclick="switchAuth('register')">
+                    REGISTER NOW
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="register-overlay" role="dialog" aria-modal="true" aria-labelledby="register-title">
+        <div class="auth-panel auth-panel--register">
+            <button class="auth-panel__close" onclick="closeOverlay('register-overlay')" aria-label="Cerrar">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="auth-panel__header">
+                <h2 id="register-title">Crear Cuenta</h2>
+                <p>Únete a la comunidad Power Rocket</p>
+            </div>
+            <form class="auth-form" id="register-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="register-name" class="form-label">Nombre</label>
+                        <input type="text" class="form-input" id="register-name" placeholder="Tu nombre" required>
+                        <span class="form-error" id="register-name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-lastname" class="form-label">Apellido</label>
+                        <input type="text" class="form-input" id="register-lastname" placeholder="Tu apellido" required>
+                        <span class="form-error" id="register-lastname-error"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="register-birthdate" class="form-label">Fecha de nacimiento</label>
+                        <input type="text" class="form-input" id="register-birthdate" placeholder="DD/MM/AAAA" required>
+                        <span class="form-error" id="register-birthdate-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-input" id="register-email" placeholder="tu@correo.com" required>
+                        <span class="form-error" id="register-email-error"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="register-password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-input" id="register-password" placeholder="••••••••"
+                            required>
+                        <span class="form-error" id="register-password-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-input" id="register-confirm" placeholder="••••••••" required>
+                        <span class="form-error" id="register-confirm-error"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">
+                    REGISTRARSE
+                </button>
+            </form>
+            <div class="auth-panel__footer">
+                <p>¿Ya tienes cuenta?</p>
+                <button class="btn btn--outline btn--block" onclick="switchAuth('login')">
+                    INICIAR SESIÓN
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="cart-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="cart-panel">
+            <div class="cart-panel__header">
+                <h2 id="cart-title">Mi Carrito</h2>
+                <button class="cart-panel__close" onclick="closeOverlay('cart-overlay')" aria-label="Cerrar">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-tabs">
+                <button class="cart-tab active" data-tab="cart">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Carrito
+                </button>
+                <button class="cart-tab" data-tab="favorites">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                    Favoritos
+                </button>
+            </div>
+            <div class="cart-content" id="cart-content">
+                <div class="cart-items" id="cart-items"></div>
+                <div class="cart-empty" id="cart-empty">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <p>Tu carrito está vacío</p>
+                    <button class="btn btn--primary"
+                        onclick="closeOverlay('cart-overlay'); location.href='products.html';">
+                        Ver productos
+                    </button>
+                </div>
+            </div>
+            <div class="favorites-content hidden" id="favorites-content">
+                <div class="favorites-items" id="favorites-items"></div>
+                <div class="favorites-empty" id="favorites-empty">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                    <p>No tienes favoritos aún</p>
+                    <button class="btn btn--primary"
+                        onclick="closeOverlay('cart-overlay'); location.href='products.html';">
+                        Explorar productos
+                    </button>
+                </div>
+            </div>
+            <div class="cart-summary" id="cart-summary">
+                <div class="cart-summary__row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0</span>
+                </div>
+                <div class="cart-summary__row">
+                    <span>Impuestos (19%)</span>
+                    <span id="cart-tax">$0</span>
+                </div>
+                <div class="cart-summary__row cart-summary__total">
+                    <span>Total</span>
+                    <span id="cart-total">$0</span>
+                </div>
+                <button class="btn btn--primary btn--block btn--lg" id="checkout-btn" onclick="openCheckout()">
+                    Pagar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="checkout-overlay" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+        <div class="checkout-panel">
+            <button class="checkout-panel__close" onclick="closeOverlay('checkout-overlay')" aria-label="Cerrar">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="checkout-progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="progress-step__number">1</div>
+                    <span>Resumen</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="progress-step__number">2</div>
+                    <span>Datos</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="progress-step__number">3</div>
+                    <span>Pago</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <div class="progress-step__number">4</div>
+                    <span>Confirmación</span>
+                </div>
+            </div>
+            <div class="checkout-step active" id="checkout-step-1">
+                <h2 id="checkout-title">Resumen del Pedido</h2>
+                <div class="checkout-items" id="checkout-items"></div>
+                <div class="checkout-totals">
+                    <div class="checkout-row">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">$0</span>
+                    </div>
+                    <div class="checkout-row">
+                        <span>Impuestos (19%)</span>
+                        <span id="checkout-tax">$0</span>
+                    </div>
+                    <div class="checkout-row checkout-total">
+                        <span>Total</span>
+                        <span id="checkout-total">$0</span>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--block" onclick="nextCheckoutStep(2)">
+                    Continuar
+                </button>
+            </div>
+            <div class="checkout-step" id="checkout-step-2">
+                <h2>Datos de Envío</h2>
+                <form class="checkout-form" id="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-name" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-input" id="checkout-name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-address" class="form-label">Dirección</label>
+                        <input type="text" class="form-input" id="checkout-address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-city" class="form-label">Ciudad</label>
+                            <input type="text" class="form-input" id="checkout-city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-zip" class="form-label">Código Postal</label>
+                            <input type="text" class="form-input" id="checkout-zip" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-phone" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-input" id="checkout-phone" required>
+                    </div>
+                </form>
+                <div class="checkout-actions">
+                    <button class="btn btn--outline" onclick="prevCheckoutStep(1)">
+                        Volver
+                    </button>
+                    <button class="btn btn--primary" onclick="nextCheckoutStep(3)">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+            <div class="checkout-step" id="checkout-step-3">
+                <h2>Método de Pago</h2>
+                <div class="payment-methods">
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="card" checked>
+                        <div class="payment-method__content">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                            <span>Tarjeta de crédito/débito</span>
+                        </div>
+                    </label>
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="transfer">
+                        <div class="payment-method__content">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <span>Transferencia bancaria</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="card-form" id="card-form">
+                    <div class="form-group">
+                        <label for="card-name" class="form-label">Nombre en la tarjeta</label>
+                        <input type="text" class="form-input" id="card-name" placeholder="NOMBRE APELLIDO">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number" class="form-label">Número de tarjeta</label>
+                        <input type="text" class="form-input" id="card-number" placeholder="1234 5678 9012 3456"
+                            maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-expiry" class="form-label">Fecha de expiración</label>
+                            <input type="text" class="form-input" id="card-expiry" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-input" id="card-cvv" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-actions">
+                    <button class="btn btn--outline" onclick="prevCheckoutStep(2)">
+                        Volver
+                    </button>
+                    <button class="btn btn--primary" onclick="processPaymentSimulated()">
+                        Confirmar Pago
+                    </button>
+                </div>
+            </div>
+            <div class="checkout-step" id="checkout-step-4">
+                <div class="checkout-success">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h2>¡Compra Exitosa!</h2>
+                    <p>Gracias por tu pedido. Recibirás un correo de confirmación pronto.</p>
+                    <p class="order-number">Pedido #<span id="order-number">000000</span></p>
+                    <button class="btn btn--primary" onclick="finishCheckout()">
+                        Seguir comprando
+                    </button>
+                </div>
+                <div class="confetti-container" id="confetti-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="quickview-overlay" role="dialog" aria-modal="true" aria-labelledby="quickview-title">
+        <div class="quickview-panel">
+            <button class="quickview-panel__close" onclick="closeOverlay('quickview-overlay')" aria-label="Cerrar">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="quickview-content" id="quickview-content"></div>
+        </div>
+    </div>
+
+    <div class="overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-panel">
+            <button class="modal-panel__close" onclick="closeOverlay('modal-overlay')" aria-label="Cerrar">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="logo__icon">🚀</span>
+                        <span class="logo__text">Power<span class="logo__accent">Rocket</span></span>
+                    </a>
+                    <p class="footer__desc">
+                        Transformando el sedentarismo en diversión sobre ruedas. E-commerce, comunidad y blog para
+                        amantes del patinaje.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Nosotros</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="community.html">Comunidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="products.html?category=Patines">Patines</a></li>
+                        <li><a href="products.html?category=Ruedas">Ruedas</a></li>
+                        <li><a href="products.html?category=Protecciones">Protecciones</a></li>
+                        <li><a href="products.html?category=Mochilas">Mochilas</a></li>
+                        <li><a href="products.html?category=Ropa">Ropa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Santiago, Chile
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            +56 9 1234 5678
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            contactme@powerrocket.cl
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 Power Rocket . Todos los derechos reservados.</p>
+                <p>Desarrollado con pasión por el movimiento.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
