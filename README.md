@@ -3,7 +3,7 @@
 Power Rocket es un proyecto de e-commerce frontend enfocado en patines y equipamiento recreativo, con un fuerte énfasis en la experiencia de usuario, accesibilidad y comunidad. La plataforma busca combatir el sedentarismo promoviendo la actividad física desde un enfoque lúdico y social.
 
 ## Estructura del Proyecto
-
+```
 Power-Rocket/
 │
 ├── index.html # Página principal (Home)
@@ -20,7 +20,7 @@ Power-Rocket/
 │ └── js/ # Scripts JavaScript
 │
 └── README.md
-
+```
 ## Navegación SPA
 
 La aplicación funciona como una Single Page Application (SPA) simple:
