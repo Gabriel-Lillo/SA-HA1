@@ -1,20 +1,25 @@
 # Rocket Power - E-commerce SPA
 
-E-commerce de patines y equipamiento recreativo con comunidad y blog orientados a promover la actividad física lúdica.
+Power Rocket es un proyecto de e-commerce frontend enfocado en patines y equipamiento recreativo, con un fuerte énfasis en la experiencia de usuario, accesibilidad y comunidad. La plataforma busca combatir el sedentarismo promoviendo la actividad física desde un enfoque lúdico y social.
 
 ## Estructura del Proyecto
 
-\`\`\`
-SA-HA1/
-├─ assets/
-│  ├─ img/          (imágenes del proyecto)
-│  ├─ css/
-│  │  └─ styles.css (estilos organizados por secciones)
-│  └─ js/
-│     └─ main.js    (lógica modular de la aplicación)
-├─ index.html       (estructura HTML semántica)
-└─ README.md        (este archivo)
-\`\`\`
+Power-Rocket/
+│
+├── index.html # Página principal (Home)
+├── about.html # Sobre nosotros
+├── services.html # Servicios
+├── products.html # Productos
+├── community.html # Comunidad
+├── contact.html # Contacto
+│
+├── assets/
+│ ├── css/
+│ │ └── styles.css # Estilos globales
+│ ├── img/ # Imágenes del proyecto
+│ └── js/ # Scripts JavaScript
+│
+└── README.md
 
 ## Navegación SPA
 
